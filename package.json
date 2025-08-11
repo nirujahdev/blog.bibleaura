@@ -1,0 +1,48 @@
+{
+  "name": "blog.bibleaura.xyz",
+  "version": "1.0.0",
+  "private": true,
+  "description": "SEO-optimized blog for Bible Aura - the world's most accurate Bible AI platform",
+  "keywords": ["Bible AI", "AI Bible study", "Bible Aura", "Christian AI", "AI sermon preparation", "digital Bible study"],
+  "author": "Bible Aura Team",
+  "license": "MIT",
+  "scripts": {
+    "dev": "next dev --turbopack",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "postbuild": "next-sitemap",
+    "sitemap": "next-sitemap"
+  },
+  "dependencies": {
+    "gsap": "^3.13.0",
+    "next": "15.4.6",
+    "next-seo": "^6.8.0",
+    "next-sitemap": "^4.2.3",
+    "react": "19.1.0",
+    "react-dom": "19.1.0"
+  },
+  "devDependencies": {
+    "@eslint/eslintrc": "^3",
+    "@tailwindcss/postcss": "^4",
+    "@types/node": "^20",
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
+    "eslint": "^9",
+    "eslint-config-next": "15.4.6",
+    "tailwindcss": "^4",
+    "typescript": "^5"
+  },
+  "engines": {
+    "node": ">=18.0.0",
+    "npm": ">=8.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/nirujahdev/blog.bibleaura.git"
+  },
+  "homepage": "https://blog.bibleaura.xyz",
+  "bugs": {
+    "url": "https://github.com/nirujahdev/blog.bibleaura/issues"
+  }
+}
