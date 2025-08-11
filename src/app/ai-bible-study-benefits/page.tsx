@@ -1,7 +1,6 @@
 
 
-import { useEffect, useRef } from 'react'
-import { gsap } from 'gsap'
+
 import Link from 'next/link'
 import { Metadata } from 'next'
 
@@ -21,20 +20,6 @@ export const metadata: Metadata = {
 }
 
 export default function AIBibleStudyBenefitsPage() {
-  const heroRef = useRef<HTMLDivElement>(null)
-  const contentRef = useRef<HTMLDivElement>(null)
-
-  useEffect(() => {
-    gsap.fromTo(heroRef.current,
-      { opacity: 0, y: 30 },
-      { opacity: 1, y: 0, duration: 0.8, ease: "power2.out" }
-    )
-
-    gsap.fromTo(contentRef.current,
-      { opacity: 0, y: 30 },
-      { opacity: 1, y: 0, duration: 0.8, delay: 0.2, ease: "power2.out" }
-    )
-  }, [])
 
   return (
     <div className="min-h-screen bg-gray-50">
@@ -52,7 +37,7 @@ export default function AIBibleStudyBenefitsPage() {
             </p>
           </div>
 
-          <div ref={contentRef} className="p-8">
+                      <div className="p-8">
             <div className="prose prose-lg max-w-none">
               <p className="text-lg mb-8">
                 Artificial Intelligence is revolutionizing how Christians study Scripture. <Link href="https://bibleaura.xyz" className="text-orange-600 hover:text-orange-700 font-semibold">Bible Aura</Link> leads this transformation with features that deepen understanding and enhance spiritual growth.
