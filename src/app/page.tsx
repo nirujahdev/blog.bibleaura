@@ -3,7 +3,7 @@
 import { useEffect, useRef } from 'react'
 import { gsap } from 'gsap'
 import Link from 'next/link'
-import { Metadata } from 'next'
+// Homepage component
 
 // Define blog posts data for the homepage
 const blogPosts = [
@@ -275,7 +275,7 @@ export default function BlogHomepage() {
 
       <div className="min-h-screen bg-gray-50">
         {/* Hero Section */}
-        <div ref={heroRef} className="bg-gradient-to-r from-blue-600 to-purple-700 text-white">
+        <div className="bg-gradient-to-r from-blue-600 to-purple-700 text-white">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
             <div className="text-center">
               <h1 className="text-4xl md:text-6xl font-bold mb-6">
@@ -307,7 +307,7 @@ export default function BlogHomepage() {
             {/* Main Content */}
             <div className="lg:col-span-3">
               {/* Featured Articles */}
-              <div ref={featuredRef} className="mb-12">
+              <div className="mb-12">
                 <h2 className="text-3xl font-bold text-gray-900 mb-8">Featured Articles</h2>
                 <div className="grid md:grid-cols-3 gap-8">
                   {featuredPosts.map((post, index) => (
@@ -340,7 +340,7 @@ export default function BlogHomepage() {
               </div>
 
               {/* All Blog Posts */}
-              <div ref={blogGridRef}>
+              <div>
                 <h2 className="text-3xl font-bold text-gray-900 mb-8">All Articles</h2>
                 <div className="grid md:grid-cols-2 gap-8">
                   {allPosts.map((post, index) => (
@@ -384,7 +384,7 @@ export default function BlogHomepage() {
             </div>
 
             {/* Sidebar */}
-            <div ref={sidebarRef} className="lg:col-span-1">
+            <div className="lg:col-span-1">
               <div className="sticky top-24 space-y-8">
                 {/* CTA */}
                 <div className="bg-gradient-to-br from-blue-600 to-purple-700 text-white p-6 rounded-xl">
@@ -474,7 +474,7 @@ export default function BlogHomepage() {
           </div>
 
           {/* FAQ Section */}
-          <div ref={faqRef} className="mt-16 bg-white rounded-xl shadow-lg p-8">
+          <div className="mt-16 bg-white rounded-xl shadow-lg p-8">
             <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">
               Frequently Asked Questions
             </h2>

@@ -1,10 +1,6 @@
 'use client'
 
-import { useEffect, useRef } from 'react'
-import { gsap } from 'gsap'
-import Link from 'next/link'
-import AnswerSnippet from './AnswerSnippet'
-import BreadcrumbSchema from './BreadcrumbSchema'
+// Simplified component for micro-content display
 
 interface MicroAnswer {
   question: string

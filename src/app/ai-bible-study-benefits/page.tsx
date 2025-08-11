@@ -25,7 +25,7 @@ export default function AIBibleStudyBenefitsPage() {
     <div className="min-h-screen bg-gray-50">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <article className="bg-white rounded-xl shadow-lg overflow-hidden">
-          <div ref={heroRef} className="bg-gradient-to-r from-orange-600 to-red-600 text-white p-8">
+          <div className="bg-gradient-to-r from-orange-600 to-red-600 text-white p-8">
             <span className="bg-orange-500 text-white px-3 py-1 rounded-full text-sm font-medium">
               Benefits
             </span>

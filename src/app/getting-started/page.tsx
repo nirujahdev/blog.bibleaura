@@ -36,29 +36,9 @@ export const metadata: Metadata = {
 }
 
 export default function GettingStartedPage() {
-  const contentRef = useRef<HTMLDivElement>(null)
-  const sidebarRef = useRef<HTMLDivElement>(null)
-  const heroRef = useRef<HTMLDivElement>(null)
 
-  useEffect(() => {
-    // Hero animation
-    gsap.fromTo(heroRef.current,
-      { opacity: 0, y: 30 },
-      { opacity: 1, y: 0, duration: 0.8, ease: "power2.out" }
-    )
 
-    // Content animation
-    gsap.fromTo(contentRef.current,
-      { opacity: 0, y: 30 },
-      { opacity: 1, y: 0, duration: 0.8, delay: 0.2, ease: "power2.out" }
-    )
 
-    // Sidebar animation
-    gsap.fromTo(sidebarRef.current,
-      { opacity: 0, x: 30 },
-      { opacity: 1, x: 0, duration: 0.8, delay: 0.4, ease: "power2.out" }
-    )
-  }, [])
 
   return (
     <>
@@ -127,10 +107,10 @@ export default function GettingStartedPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
           <div className="grid grid-cols-1 lg:grid-cols-4 gap-12">
             {/* Main Content */}
-            <div ref={contentRef} className="lg:col-span-3">
+            <div className="lg:col-span-3">
               <article className="bg-white rounded-xl shadow-lg overflow-hidden">
                 {/* Article Header */}
-                <div ref={heroRef} className="bg-gradient-to-r from-blue-600 to-blue-700 text-white p-8">
+                <div className="bg-gradient-to-r from-blue-600 to-blue-700 text-white p-8">
                   <div className="mb-4">
                     <span className="bg-blue-500 text-white px-3 py-1 rounded-full text-sm font-medium">
                       Getting Started
@@ -341,7 +321,7 @@ export default function GettingStartedPage() {
             </div>
 
             {/* Sidebar */}
-            <div ref={sidebarRef} className="lg:col-span-1">
+            <div className="lg:col-span-1">
               <div className="sticky top-24 space-y-8">
                 {/* Try Bible Aura CTA */}
                 <div className="bg-blue-600 text-white p-6 rounded-xl">

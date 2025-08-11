@@ -149,7 +149,7 @@ export default function EnhancedBlogPost({
   // Add reviewer to schema if present
   if (reviewer) {
     blogPostSchema.author = [
-      blogPostSchema.author,
+      blogPostSchema.author as any,
       {
         "@type": "Person",
         "name": reviewer.name,

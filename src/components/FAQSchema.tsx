@@ -9,7 +9,7 @@ interface FAQSchemaProps {
   pageUrl?: string
 }
 
-export default function FAQSchema({ faqs, pageTitle, pageUrl }: FAQSchemaProps) {
+export default function FAQSchema({ faqs }: FAQSchemaProps) {
   const faqSchema = {
     "@context": "https://schema.org",
     "@type": "FAQPage",

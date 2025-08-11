@@ -20,20 +20,7 @@ export const metadata: Metadata = {
 }
 
 export default function SuccessStoriesPage() {
-  const heroRef = useRef<HTMLDivElement>(null)
-  const storiesRef = useRef<HTMLDivElement>(null)
 
-  useEffect(() => {
-    gsap.fromTo(heroRef.current,
-      { opacity: 0, y: 30 },
-      { opacity: 1, y: 0, duration: 0.8, ease: "power2.out" }
-    )
-
-    gsap.fromTo(storiesRef.current?.children || [],
-      { opacity: 0, y: 30 },
-      { opacity: 1, y: 0, duration: 0.6, stagger: 0.2, delay: 0.3, ease: "power2.out" }
-    )
-  }, [])
 
   const stories = [
     {
@@ -120,7 +107,7 @@ export default function SuccessStoriesPage() {
 
       <div className="min-h-screen bg-gray-50">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-          <div ref={heroRef} className="text-center mb-16">
+          <div className="text-center mb-16">
             <span className="bg-green-500 text-white px-4 py-2 rounded-full text-sm font-medium">
               Success Stories
             </span>
@@ -132,7 +119,7 @@ export default function SuccessStoriesPage() {
             </p>
           </div>
 
-          <div ref={storiesRef} className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+          <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
             {stories.map((story, index) => (
               <div key={index} className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow">
                 <div className="p-8">

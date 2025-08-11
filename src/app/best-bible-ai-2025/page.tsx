@@ -36,36 +36,7 @@ export const metadata: Metadata = {
 }
 
 export default function BestBibleAI2025Page() {
-  const contentRef = useRef<HTMLDivElement>(null)
-  const sidebarRef = useRef<HTMLDivElement>(null)
-  const heroRef = useRef<HTMLDivElement>(null)
-  const comparisonRef = useRef<HTMLTableElement>(null)
 
-  useEffect(() => {
-    // Hero animation
-    gsap.fromTo(heroRef.current,
-      { opacity: 0, y: 30 },
-      { opacity: 1, y: 0, duration: 0.8, ease: "power2.out" }
-    )
-
-    // Content animation
-    gsap.fromTo(contentRef.current,
-      { opacity: 0, y: 30 },
-      { opacity: 1, y: 0, duration: 0.8, delay: 0.2, ease: "power2.out" }
-    )
-
-    // Sidebar animation
-    gsap.fromTo(sidebarRef.current,
-      { opacity: 0, x: 30 },
-      { opacity: 1, x: 0, duration: 0.8, delay: 0.4, ease: "power2.out" }
-    )
-
-    // Comparison table animation
-    gsap.fromTo(comparisonRef.current,
-      { opacity: 0, scale: 0.95 },
-      { opacity: 1, scale: 1, duration: 0.8, delay: 0.6, ease: "power2.out" }
-    )
-  }, [])
 
   return (
     <>
@@ -134,10 +105,10 @@ export default function BestBibleAI2025Page() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
           <div className="grid grid-cols-1 lg:grid-cols-4 gap-12">
             {/* Main Content */}
-            <div ref={contentRef} className="lg:col-span-3">
+            <div className="lg:col-span-3">
               <article className="bg-white rounded-xl shadow-lg overflow-hidden">
                 {/* Article Header */}
-                <div ref={heroRef} className="bg-gradient-to-r from-purple-600 to-blue-700 text-white p-8">
+                <div className="bg-gradient-to-r from-purple-600 to-blue-700 text-white p-8">
                   <div className="mb-4">
                     <span className="bg-purple-500 text-white px-3 py-1 rounded-full text-sm font-medium">
                       Comparison
@@ -260,7 +231,7 @@ export default function BestBibleAI2025Page() {
                     <h2 className="text-3xl font-bold text-gray-900 mb-6">Head-to-Head Comparison</h2>
                     
                     <div className="overflow-x-auto mb-8">
-                      <table ref={comparisonRef} className="w-full border-collapse bg-white shadow-lg rounded-lg overflow-hidden">
+                      <table className="w-full border-collapse bg-white shadow-lg rounded-lg overflow-hidden">
                         <thead className="bg-gray-50">
                           <tr>
                             <th className="border border-gray-200 px-4 py-3 text-left font-semibold">Feature Category</th>
@@ -420,7 +391,7 @@ export default function BestBibleAI2025Page() {
             </div>
 
             {/* Sidebar */}
-            <div ref={sidebarRef} className="lg:col-span-1">
+            <div className="lg:col-span-1">
               <div className="sticky top-24 space-y-8">
                 {/* Try Bible Aura CTA */}
                 <div className="bg-purple-600 text-white p-6 rounded-xl">
