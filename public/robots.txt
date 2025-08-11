@@ -1,0 +1,20 @@
+# *
+User-agent: *
+Allow: /
+Disallow: /api/
+Disallow: /_next/
+Disallow: /admin/
+
+# GPTBot
+User-agent: GPTBot
+Disallow: /
+
+# ChatGPT-User
+User-agent: ChatGPT-User
+Disallow: /
+
+# Host
+Host: https://blog.bibleaura.xyz
+
+# Sitemaps
+Sitemap: https://blog.bibleaura.xyz/sitemap.xml
